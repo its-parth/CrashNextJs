@@ -1,5 +1,13 @@
 import Link from "next/link";
 
+export function generateStaticParams() {
+  return [
+    {blogID: "1"},
+    {blogID: "2"},
+    {blogID: "3"},
+  ]
+}
+
 const Blog = async ({ params }) => {
   const { blogID } = await params;
   console.log("blogID: ", blogID);
